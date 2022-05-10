@@ -35,9 +35,7 @@ const PopularSport = () => {
   };
   return (
     <View>
-      <FlatList data={data} 
-      renderItem={renderItem} 
-      horizontal={true} />
+      <FlatList data={data} renderItem={renderItem} horizontal={true} />
     </View>
   );
 };

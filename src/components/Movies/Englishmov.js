@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, FlatList, TouchableOpacity} from 'react-native';
+import {View, Image, FlatList, TouchableOpacity,StyleSheet} from 'react-native';
 const data = [
   {
     src: require('../../assets/images/cash.jpg'),
@@ -23,7 +23,7 @@ const Englishmov = () => {
       <View>
         <TouchableOpacity>
           <Image
-            style={{borderRadius: 5, height: 160, width: 150, margin: 7}}
+            style={styles.image}
             source={item.src}
           />
         </TouchableOpacity>
@@ -37,3 +37,12 @@ const Englishmov = () => {
   );
 };
 export default Englishmov;
+const styles=StyleSheet.create({
+  image:{
+    borderRadius: 5,
+     height: 160, 
+     width: 150,
+      margin: 7
+  }
+  
+})

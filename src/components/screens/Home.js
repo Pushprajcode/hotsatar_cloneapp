@@ -1,16 +1,11 @@
-import React, {useEffect} from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
-// import Header from '../Home/header';
-// import Ads from './Ads';
-// import Movie from '../MovieList';
-
+import React from 'react';
 import Movie from '../screens/Movie';
-
 function Home({navigation}) {
   return (
     <View style={styles.container}>
       <ScrollView bounces={false}>
-        <Movie />
+        <Movie navigation={navigation} />
       </ScrollView>
     </View>
   );

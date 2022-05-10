@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, FlatList, TouchableOpacity} from 'react-native';
+import {View, Image, FlatList, TouchableOpacity,StyleSheet} from 'react-native';
 const data = [
   {
     src: require('../../assets/images/pixar.jpg'),
@@ -29,7 +29,7 @@ const Newond = () => {
       <View>
         <TouchableOpacity>
           <Image
-            style={{borderRadius: 5, height: 160, width: 120, margin: 7}}
+            style={styles.image}
             source={item.src}
           />
         </TouchableOpacity>
@@ -43,3 +43,12 @@ const Newond = () => {
   );
 };
 export default Newond;
+const styles=StyleSheet.create({
+  image:{
+    borderRadius: 5,
+     height: 160,
+      width: 150,
+       margin: 7
+  }
+
+})

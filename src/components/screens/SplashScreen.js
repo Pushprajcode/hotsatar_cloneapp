@@ -9,7 +9,7 @@ export default function SplashScreen({navigation}) {
     <View style={styles.container}>
       <Image
         style={styles.image}
-        source={require("../../assets/images/hotStar.png")}
+        source={require('../../assets/images/hotStar.png')}
       />
     </View>
   );

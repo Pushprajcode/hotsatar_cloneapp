@@ -1,10 +1,5 @@
 import React from 'react';
 import {Image} from 'react-native';
-// import Home from '../screens/Home';
-// import Tv from '../screens/Tv';
-// import Sports from '../screens/Sports';
-// import Movie from '../screens/Movie';
-
 import Home from '../screens/Home';
 import Tv from '../screens/Tv';
 import Sports from '../screens/Sports';

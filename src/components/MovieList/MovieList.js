@@ -1,10 +1,5 @@
 import React from 'react';
-import {View, Text, FlatList, Image,TouchableOpacity} from 'react-native';
-// import Popular from './popular';
-// import Recomdes from './Home/Recomdes';
-// import Newon from './Home/Newon';
-// import Quixshows from './Home/Quickshows';
-
+import {View, Text, FlatList, Image,TouchableOpacity,StyleSheet} from 'react-native';
 import Popular from '../MovieList/popular';
 import Recomdes from '../Home/Recomdes';
 import Newon from '../Home/Newon';
@@ -39,7 +34,7 @@ const data = [
 const MovieList = () => {
   const renderItem = ({item}) => {
     return (
-      <View style={{backgroundColor: 'black', padding: 4, marginTop: 15}}>
+      <View style={styles.container}>
         <TouchableOpacity>
           <Image
             source={item.src}
@@ -57,18 +52,11 @@ const MovieList = () => {
   };
   const render = ({item}) => {
     return (
-      <View style={{backgroundColor: 'black', padding: 4, marginTop: 15}}>
+      <View style={styles.container}>
         <TouchableOpacity>
           <Image
             source={item.src}
-            style={{
-              width: 125,
-              height: 180,
-              // resizeMode:'contain',
-              borderRadius: 7,
-              margin: 5,
-              padding: 20,
-            }}
+            style={styles.image}
           />
         </TouchableOpacity>
       </View>
@@ -84,12 +72,7 @@ const MovieList = () => {
       />
       <View>
         <Text
-          style={{
-            color: 'white',
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginTop: 5,
-          }}>
+          style={styles.txt}>
           {'Latest & Trending'}
         </Text>
       </View>
@@ -103,72 +86,42 @@ const MovieList = () => {
       </View>
       <View>
         <Text
-          style={{
-            color: 'white',
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginBottom: 7,
-          }}>
+          style={styles.txt}>
           {'Popular Shows'}
         </Text>
         <Popular />
       </View>
       <View>
         <Text
-          style={{
-            color: 'white',
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginBottom: 7,
-          }}>
+          style={styles.txt}>
           {'Movies Recommended For You'}
         </Text>
         <Recomdes />
       </View>
       <View>
         <Text
-          style={{
-            color: 'white',
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginBottom: 7,
-          }}>
+          style={styles.txt}>
           {'New On Disney+ Hotstar'}
         </Text>
         <Newon />
       </View>
       <View>
         <Text
-          style={{
-            color: 'white',
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginBottom: 7,
-          }}>
+          style={styles.txt}>
           {'Multiplex Movies'}
         </Text>
         <Popular />
       </View>
       <View>
         <Text
-          style={{
-            color: 'white',
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginBottom: 4,
-          }}>
+          style={styles.txt}>
           {'Popular Shows'}
         </Text>
         <Popular />
       </View>
       <View>
         <Text
-          style={{
-            color: 'white',
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginBottom: 4,
-          }}>
+          style={styles.txt}>
           {'Quix Shows'}
         </Text>
         <Quixshows />
@@ -177,3 +130,30 @@ const MovieList = () => {
   );
 };
 export default MovieList;
+const styles=StyleSheet.create(
+  {
+    container:{
+      backgroundColor: 'black',
+       padding: 4,
+       marginTop: 15
+    },
+    txt:{
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 4,
+      
+    },
+    image:{
+      
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 4,
+      
+    }
+    
+  }
+)
+
+

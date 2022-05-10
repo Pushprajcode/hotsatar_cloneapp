@@ -2,7 +2,8 @@ import React from 'react';
 import {
     View,
     Image,
-    FlatList
+    FlatList,
+    StyleSheet
 
 }from 'react-native';
 // import Header from '../Home/header';
@@ -47,7 +48,7 @@ const Channels=()=>{
     const renderItem=({item})=>{
         return(
             <View>
-                <Image style={{height:150,width:180,margin:8,borderRadius:5,}}
+                <Image style={styles.image}
                 source={item.src}/>
             </View>
         )
@@ -64,4 +65,14 @@ const Channels=()=>{
        )
 }
 export default Channels;
+const styles=StyleSheet.create({
+  image:{
+    height:150,
+    width:180,
+    margin:8,
+    borderRadius:5,
+
+  }
+
+})
 

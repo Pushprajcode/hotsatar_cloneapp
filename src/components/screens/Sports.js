@@ -1,14 +1,18 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image, TouchableOpacity,ScrollView} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 
 import SportList from '../Sports/SportList1';
 import PopularSport from '../Sports/SportList2';
 import Highlights from '../Sports/SportList3';
 import Header from '../Home/header';
 import SportAdsb from '../Sports/SportAdsb';
-
-
-
 
 const Sports = ({navigation}) => {
   return (

@@ -1,7 +1,14 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 
-import {View, Text, Image, FlatList, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
 
 const Popular = () => {
   const [data, setdata] = useState([]);
@@ -24,13 +31,7 @@ const Popular = () => {
         <TouchableOpacity>
           <Image
             source={{uri: `https://image.tmdb.org/t/p/w500${item.poster_path}`}}
-            style={{
-              height: 150,
-              width: 120,
-              padding: 20,
-              margin: 5,
-              borderRadius: 7,
-            }}
+            style={styles.image}
           />
           <Text>{item.id}</Text>
         </TouchableOpacity>
@@ -44,3 +45,13 @@ const Popular = () => {
   );
 };
 export default Popular;
+
+const styles = StyleSheet.create({
+  image: {
+    height: 150,
+    width: 120,
+    padding: 20,
+    margin: 5,
+    borderRadius: 7,
+  },
+});

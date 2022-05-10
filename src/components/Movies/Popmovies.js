@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, FlatList, TouchableOpacity} from 'react-native';
+import {View, Image, FlatList, TouchableOpacity,StyleSheet} from 'react-native';
 const data = [
   {
     src: require('../../assets/images/indu.jpg'),
@@ -32,7 +32,7 @@ const Popmovies = () => {
       <View>
         <TouchableOpacity>
           <Image
-            style={{borderRadius: 5, height: 160, width: 120, margin: 7}}
+            style={styles.image}
             source={item.src}
           />
         </TouchableOpacity>
@@ -46,3 +46,12 @@ const Popmovies = () => {
   );
 };
 export default Popmovies;
+const styles=StyleSheet.create({
+  image:{
+    borderRadius: 5,
+     height: 160, 
+     width: 120, 
+     margin: 7
+
+  }
+})

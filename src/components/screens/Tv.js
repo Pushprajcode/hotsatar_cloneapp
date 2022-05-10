@@ -20,17 +20,17 @@ const Tv = ({navigation}) => {
       <Header navigation={navigation} />
       <ScrollView bounces={false}>
         <AdsTv />
-        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-        <Text style={styles.Top}>{'Top Picks For You'}</Text>
-        <TouchableOpacity onPress={()=>{
-          navigation.navigate('Homeimages')
-        }}>
-        <Image source={require('../../assets/images/next.png')} />
-        </TouchableOpacity>
-        
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Text style={styles.Top}>{'Top Picks For You'}</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Homeimages');
+            }}>
+            <Image source={require('../../assets/images/next.png')} />
+          </TouchableOpacity>
         </View>
         <TvList />
-        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Text style={styles.Popular}> {'Popular Shows'}</Text>
           <TouchableOpacity
             onPress={() => {
@@ -60,19 +60,16 @@ const styles = StyleSheet.create({
   },
   Top: {
     color: 'white',
-   // left: 2,
     fontSize: 22,
-   // marginTop: 4,
     fontWeight: 'bold',
-   // marginBottom: 4,
   },
   Popular: {
     color: 'white',
     left: 2,
-     fontSize: 22,
+    fontSize: 22,
     marginTop: 4,
-     fontWeight: 'bold',
-     marginBottom: 4,
+    fontWeight: 'bold',
+    marginBottom: 4,
   },
   disney: {
     color: 'white',
